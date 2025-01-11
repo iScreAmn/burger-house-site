@@ -103,3 +103,71 @@ main {
   cursor: pointer;
   background-color: #292929;
 }
+
+/* COVER */
+
+.cover {
+  padding: 142px 0 200px;
+}
+
+.cover .container {
+  position: relative;
+}
+
+.cover__info {
+  max-width: 608px;
+  display: flex;
+  flex-direction: column;
+}
+
+.alert {
+  width: 137px;
+  color: #FFF;
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  border-radius: 100px;
+  background: var(--d-3320-f, #D3320F);
+}
+
+.cover__title {
+  font-family: 'Merriweather', sans-serif;
+  color: var(--unnamed, #FFF);
+  margin: 0 0 56px;
+  width: 536px;
+  font-size: 120px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 130%;
+}
+
+.cover__subtitle {
+  width: 608px;
+  margin: 0 0 56px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFF;
+  
+}
+
+.button {
+  width: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 50px;
+  background: var(--unnamed, linear-gradient(135deg, #DA8023 0%, #E2B438 100%));
+  border-radius: 8px;
+  border: none;
+}
+
+.button:hover {
+  opacity: 70%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cover__img {
+   position: absolute;
+   top: -123px;
+   left: calc(100% - 991px);
+}
