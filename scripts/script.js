@@ -14,3 +14,11 @@ for (let i = 0; i < links.length; i++) {
     document.getElementById(links[i].getAttribute("data-link")).scrollIntoView({behavior: "smooth"});
   }
 }
+
+// MENU
+let buttons = document.getElementsByClassName("menu__button ");
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function () {
+    document.getElementById("order").scrollIntoView({behavior: "smooth"});
+  }
+}
