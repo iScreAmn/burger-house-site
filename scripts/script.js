@@ -47,6 +47,38 @@ document.getElementById("order-action").onclick = function() {
   }
 }
 
+// ORDER FORM
+
+// Получаем все кнопки "Заказать" на странице с классом .menu__button
+const orderButtons = document.querySelectorAll('.menu__button');
+
+// Для каждой кнопки добавляем обработчик события "click"
+orderButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    
+    // Находим ближайший элемент с классом .menu__item (родительский элемент кнопки)
+    const menuItem = this.closest('.menu__item');
+    
+    // Находим элемент с классом .menu__title внутри .menu__item (название бургера)
+    const titleElement = menuItem.querySelector('.menu__title');
+    
+    // Если название найдено, сохраняем его, иначе ставим значение по умолчанию
+    const title = titleElement ? titleElement.textContent : 'Название не указано';
+    
+    // Находим элемент с классом .price внутри .menu__item (цена бургера)
+    const priceElement = menuItem.querySelector('.price');
+    
+    // Если цена найдена, сохраняем её, иначе ставим значение по умолчанию
+    const price = priceElement ? priceElement.textContent : 'Цена не указана';
+    
+    // Находим поле ввода с id "burger" (где будет отображаться информация о заказе)
+    const orderInput = document.getElementById('burger');
+    
+    // Устанавливаем в поле ввода строку с названием и ценой бургера
+    orderInput.value = `${title} - ${price}`;
+  });
+});
+
 // CURRENCY
 let prices = document.getElementsByClassName("price");
 document.getElementById("change-currency").onclick = function(e) {
