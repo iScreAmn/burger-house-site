@@ -46,3 +46,32 @@ document.getElementById("order-action").onclick = function() {
     alert("Спасибо за заказ! Мы скоро свяжемся с вами");
   }
 }
+
+// CURRENCY
+let prices = document.getElementsByClassName("price");
+document.getElementById("change-currency").onclick = function(e) {
+  let currentCurrency = e.target.innerText;
+
+  let newCurrency = "$";
+  let coefficient = 1;
+
+  if (currentCurrency === "$") {
+    newCurrency = "₽";
+    coefficient = "90";
+  } else if (currentCurrency === "₽") {
+    newCurrency = "₾";
+    coefficient = "2.6";
+  } else if (currentCurrency === '₾') {
+    newCurrency = '€';
+    coefficient = 1.12;
+} else if (currentCurrency === '€') {
+    newCurrency = '¥';
+    coefficient = 7.14;
+}
+  e.target.innerText = newCurrency;
+
+  for (let i = 0; i < prices.length; i++) {
+    prices[i].innerText = +(prices[i].getAttribute("data-base-price") * coefficient).toFixed(1) + " " + newCurrency;
+  }
+
+}
