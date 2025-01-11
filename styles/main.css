@@ -48,3 +48,58 @@ main {
   text-transform: uppercase;
   text-align: center;
 }
+
+/* HEADER */
+
+.header {
+  padding: 54px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 192px;
+}
+
+.nav {
+  margin-right: 208px;
+}
+
+.nav__menu {
+  display: flex;
+  gap: 88px;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  opacity: 70%;
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.currency {
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px 11px 0px;
+  color: #FFF;
+  border-radius: 5px;
+  border: 1px solid #FFF;
+}
+
+.currency:hover {
+  color: #fff;
+  
+  cursor: pointer;
+  background-color: #292929;
+}
