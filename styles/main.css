@@ -171,3 +171,45 @@ main {
    top: -123px;
    left: calc(100% - 991px);
 }
+
+/* OPTION */
+
+.option {
+  background-image: url(../img/whybg.png);
+  background-position: top center;
+  background-size: initial;
+  color: #FFF;
+  margin-bottom: 180px;
+}
+
+.option__wrapper {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.option__item {
+  max-width: 312px;
+  margin-top: 60px;
+}
+
+.option__img {
+  width: 100px;
+  height: 100px;
+  align-items: center;
+}
+
+.option__title {
+  margin: 24px 0 24px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.option__subtitle {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
